@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+#registration-form {
+    margin: auto;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label, input {
+    margin-bottom: 10px;
+    width: 100%;
+    display: block;
+}
+
+input[type=button] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: #45a049;
+}
+    </style>
+</head>
+<body>
+
+<div id="registration-form">
+    <h2>Registration Form</h2>
+    <form id="form">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+
+        <input type="button" value="Submit" onclick="displayData()">
+    </form>
+</div>
+
+<div id="display-data">
+    <!-- Submitted data will be displayed here -->
+</div>
+
+<script>
+    function displayData() {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+
+    var displayDiv = document.getElementById('display-data');
+    displayDiv.innerHTML = "<h3>Submitted Data:</h3>";
+    displayDiv.innerHTML += "<p>Name: " + name + "</p>";
+    displayDiv.innerHTML += "<p>Email: " + email + "</p>";
+}
+</script>
+
+</body>
+</html>
